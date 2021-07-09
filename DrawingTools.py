@@ -19,8 +19,8 @@ def draw_box( x_anchor, y_anchor, width, height, letter, back_colour, fore_colou
             if solid:
                 print('%s%s' % (pos(x_anchor, y), letter*width*2), end='')
             else:
-                print('%s%s%s%s' % (pos(1, y),letter + letter,pos((width*2)-1, y), letter + letter), end='')
-        print('%s%s' % (pos(1, height), letter*width*2), end='')
+                print('%s%s%s%s' % (pos(x_anchor, y),letter + letter,pos(x_anchor+(width*2)-1, y), letter + letter), end='')
+        print('%s%s' % (pos(x_anchor, height), letter*width*2), end='')
         print(pos(1,height+2))
         print(Back.BLACK, end='')
         
