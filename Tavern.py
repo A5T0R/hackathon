@@ -1,4 +1,3 @@
-import sys
 from DrawingTools import *
 
 class Tavern:
@@ -10,7 +9,7 @@ class Tavern:
 
     def draw(self):
 
-        draw_box( 1, 1, 16, 16, 'W', Fore.RED, Back.WHITE, True )
+        draw_box( 1, 1, 16, 16, 'W', Fore.RED, Back.WHITE, False )
         print(self.name)
 
 
