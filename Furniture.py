@@ -8,6 +8,6 @@ class Table():
 
     def draw(self,anchor_x,anchor_y):
         draw_box( anchor_x, anchor_y, 3, 1, 'C', Fore.BLUE, Back.GREEN, True )
-        draw_box( anchor_x, anchor_y +2, 3, 2, 'T', Fore.GREEN, Back.BLUE, True )
-        draw_box( anchor_x, anchor_y +5, 3, 1, 'C', Fore.BLUE, Back.GREEN, True )
+        draw_box( anchor_x, anchor_y +1, 3, 2, 'T', Fore.GREEN, Back.BLUE, True )
+        draw_box( anchor_x, anchor_y +3, 3, 1, 'C', Fore.BLUE, Back.GREEN, True )
 
