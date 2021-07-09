@@ -1,4 +1,5 @@
 from Tavern import *
+from Map import *
 import keyboard
 from DrawingTools import clearscreen
 
