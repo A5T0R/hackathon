@@ -11,12 +11,12 @@ class Tavern:
         self.objects = []
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 16, 16, 'W', Fore.RED, Back.WHITE, False )
+        draw_box( anchor_x, anchor_y, self.w, self.h, 'W', Fore.RED, Back.WHITE, False )
 
         for lo in self.objects:
-            lo.object.draw(self.anchor_x + lo.anchor_x, self.anchor_y + lo.anchor_y)
+            lo.object.draw(anchor_x + lo.anchor_x, anchor_y + lo.anchor_y)
 
-        print(self.name)
+        print('%s%s' % (pos(anchor_x*2,self.h+anchor_y+1), self.name), end='')
 
     def add(self,anchor_x,anchor_y,obj):
         LocatedObject = namedtuple('LocatedObject', 'anchor_x anchor_y object')
