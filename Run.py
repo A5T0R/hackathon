@@ -6,14 +6,15 @@ from DrawingTools import clearscreen
 def run():
 
     clearscreen()
+
+    m = Map()
     t = Tavern(16,16,"The Dragons Hoard")
 
-    standardtable = Table(4,1)
+    t.add(3,3,Table(4,1))
 
-    t.add(3,3,standardtable)
-    t.add(6,6,standardtable)
+    m.add(5,5,t)
 
-    t.draw()
+    m.draw()
 
 
 if __name__ == "__main__":
