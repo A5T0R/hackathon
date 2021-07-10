@@ -6,7 +6,7 @@ class Map:
 
     def __init__(self):
         self.anchor_x = 1
-        self.anchor_y = 1
+        self.anchor_y = 2
         self.objects = []
 
     def draw(self):
