@@ -42,6 +42,8 @@ def run():
 
     draw_map()
 
+    print(id(t))
+
     bind_movement_keys()
 
     keyboard.wait("Esc")

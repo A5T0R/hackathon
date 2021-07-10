@@ -16,7 +16,8 @@ class Tavern:
         for lo in self.objects:
             lo.object.draw(anchor_x + lo.anchor_x, anchor_y + lo.anchor_y)
 
-        print('%s%s' % (pos(anchor_x*2,self.h+anchor_y+1), self.name), end='')
+        print('%s%s' % (pos(anchor_x*2,self.h+anchor_y+1), self.name), end='\n')
+
 
     def add(self,anchor_x,anchor_y,obj):
         LocatedObject = namedtuple('LocatedObject', 'anchor_x anchor_y object')
