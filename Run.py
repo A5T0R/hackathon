@@ -42,8 +42,7 @@ def run():
 
     draw_map()
 
-    print(id(t))
-
+    # this will fail... you need to pass an instance of an object with a function called move that takes a single argument keyboard.KeyboardEvent
     bind_movement_keys()
 
     keyboard.wait("Esc")
