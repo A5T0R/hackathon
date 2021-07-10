@@ -14,33 +14,42 @@ class Furniture:
 class VTable(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 3, 1, 'C', Fore.BLUE, Back.GREEN, True )
-        draw_box( anchor_x, anchor_y +1, 3, 2, 'T', Fore.GREEN, Back.BLUE, True )
-        draw_box( anchor_x, anchor_y +3, 3, 1, 'C', Fore.BLUE, Back.GREEN, True )
+        draw_box( anchor_x, anchor_y, self.w, self.h, 'T', Fore.GREEN, Back.BLUE, True )
+        self.cur_x = anchor_x
+        self.cur_y = anchor_y
+
+class VBench(Furniture):
+
+    def draw(self,anchor_x,anchor_y):
+        draw_box( anchor_x, anchor_y, self.w, self.h, 'C', Fore.BLUE, Back.GREEN, True )
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
 class HTable(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 1, 3, 'C', Fore.BLUE, Back.GREEN, True )
-        draw_box( anchor_x +1, anchor_y, 2, 3, 'T', Fore.GREEN, Back.BLUE, True )
-        draw_box( anchor_x +3, anchor_y, 1, 3, 'C', Fore.BLUE, Back.GREEN, True )
+        draw_box( anchor_x, anchor_y, self.w, self.h, 'T', Fore.GREEN, Back.BLUE, True )
+        self.cur_x = anchor_x
+        self.cur_y = anchor_y
+
+class HBench(Furniture):
+
+    def draw(self,anchor_x,anchor_y):
+        draw_box( anchor_x, anchor_y, self.w, self.h, 'C', Fore.BLUE, Back.GREEN, True )
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
 class Bar(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 1, 6, 'B', Fore.MAGENTA, Back.YELLOW, True )
-        draw_box( anchor_x, anchor_y +6, 2, 1, 'B', Fore.MAGENTA, Back.YELLOW, True )
+        draw_box( anchor_x, anchor_y, self.w, self.h, 'B', Fore.MAGENTA, Back.YELLOW, True )
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
 class Stool(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 1, 1, 'S', Fore.BLACK, Back.RED, True )
+        draw_box( anchor_x, anchor_y, self.w, self.h ,'S', Fore.BLACK, Back.RED, True )
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
@@ -48,49 +57,55 @@ class Stool(Furniture):
 class Fireplace(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 1, 4, 'F', Fore.RED, Back.CYAN, True )
+        draw_box( anchor_x, anchor_y, self.w, self.h ,'F', Fore.RED, Back.CYAN, True )
         self.cur_x = anchor_x
         self.cur_y = anchor_y
         
 class Stairs(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 6, 3, 'I', Fore.RED, Back.MAGENTA, True )
+        draw_box( anchor_x, anchor_y, self.w, self.h ,'I', Fore.RED, Back.MAGENTA, True )
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
 class Door(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 3, 1, 'D', Fore.BLACK, Back.BLUE, True )  
+        draw_box( anchor_x, anchor_y, self.w, self.h ,'D', Fore.BLACK, Back.BLUE, True )  
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
 class HWindow(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 3, 1, 'W', Fore.CYAN, Back.BLUE, True ) 
+        draw_box( anchor_x, anchor_y, self.w, self.h ,'W', Fore.CYAN, Back.BLUE, True ) 
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
 class VWindow(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 1, 3, 'W', Fore.CYAN, Back.BLUE, True ) 
+        draw_box( anchor_x, anchor_y, self.w, self.h ,'W', Fore.CYAN, Back.BLUE, True ) 
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
 class NoticeBoard(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 2, 1, 'N', Fore.BLACK, Back.YELLOW, True ) 
+        draw_box( anchor_x, anchor_y, self.w, self.h ,'N', Fore.BLACK, Back.YELLOW, True ) 
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
 class CellarDoor(Furniture):
 
     def draw(self,anchor_x,anchor_y):
-        draw_box( anchor_x, anchor_y, 2, 2, 'O', Fore.BLACK, Back.GREEN, True)
+        draw_box( anchor_x, anchor_y, self.w, self.h ,'O', Fore.BLACK, Back.GREEN, True)
         self.cur_x = anchor_x
         self.cur_y = anchor_y
 
+class Wall(Furniture):
+
+    def draw(self,anchor_x,anchor_y):
+        draw_box( anchor_x, anchor_y, self.w, self.h, 'W', Fore.RED, Back.WHITE, False )
+        self.cur_x = anchor_x
+        self.cur_y = anchor_y
