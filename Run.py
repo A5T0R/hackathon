@@ -50,11 +50,12 @@ def draw_map():
 #Character
     #tvn.add( 10,1, chr)
 #NPTs
-    tvn.add( 17,5, bro)
-    tvn.add( 9,14, brs)
-    tvn.add( 3,8, pat)
-    tvn.add( 7,15, pat)
-    tvn.add( 15,7, pat)
+
+#    tvn.add( 17,5, bro)
+#    tvn.add( 9,14, brs)
+#    tvn.add( 3,8, pat)
+#    tvn.add( 7,15, pat)
+#    tvn.add( 15,7, pat)
 
     m.add(0,0,tvn)
     m.draw()
