@@ -6,6 +6,7 @@ class Character:
         self.h = h
 
 class Player(Character):
+
     def draw(self,anchor_x,anchor_y):
         draw_character( anchor_x, anchor_y, self.w, self.h, '@', Fore.BLUE, Back.CYAN, False )
         self.current_anchor_x = anchor_x
@@ -15,10 +16,15 @@ class Player(Character):
         self.draw( self.current_anchor_x, self.current_anchor_y )
 
     def move(self,event):
+        #print(event.name)
         if( event.name == "down" ):
             self.current_anchor_y += 1
         if( event.name == "up" ):
             self.current_anchor_y -= 1
+        if( event.name == "left" ):
+            self.current_anchor_x -= 1
+        if(event.name == "right" ):
+            self.current_anchor_x += 1
         self.refresh()
         
 

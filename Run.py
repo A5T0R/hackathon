@@ -28,6 +28,7 @@ def draw_map():
     ntb = NoticeBoard(2,1)
     vwd = VWindow(1,3)
     hwd = HWindow(3,1)
+    chr = Player(1,1)
 
 #Furniture
     tvn.add( 2,2, vtbl )
@@ -48,7 +49,7 @@ def draw_map():
     tvn.add( 4,0, hwd)
     tvn.add( 14,0, hwd)
 #Character
-#    tvn.add( 10,1, chr)
+    tvn.add( 10,1, chr)
 #NPTs
 
     tvn.add( 18,5, bro)

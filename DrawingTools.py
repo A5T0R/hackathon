@@ -1,6 +1,7 @@
 from colorama import *
 import colorama
 import os
+import sys
 
 colorama.init()
 
@@ -24,6 +25,7 @@ def draw_box( x_anchor, y_anchor, width, height, letter, back_colour, fore_colou
         print(Fore.WHITE, end='')
         print(Back.BLACK, end='')
         print('%s' % pos(1, 1), end='')
+        sys.stdout.flush()
 
 def draw_character( x_anchor, y_anchor, width, height, letter, back_colour, fore_colour, solid ):
         doubleletter = letter+letter
@@ -39,3 +41,4 @@ def draw_character( x_anchor, y_anchor, width, height, letter, back_colour, fore
         print(Back.BLACK, end='')
         print('%s' % pos(1, 1), end='')
         
+        sys.stdout.flush()
