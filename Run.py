@@ -5,7 +5,7 @@ import keyboard
 from DrawingTools import clearscreen
 
 
-def run():
+def draw_map():
 
     clearscreen()
 
@@ -37,8 +37,15 @@ def run():
     m.add(0,0,tvn)
     m.draw()
 
+def run():
+
+    draw_map()
+
+    while True:
+        d = keyboard.read_key()
+        if(d=='q'):
+            break
 
 if __name__ == "__main__":
  
     run()
-    keyboard.wait('q')
