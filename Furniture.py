@@ -69,6 +69,35 @@ class Door():
     def draw(self,anchor_x,anchor_y):
         draw_box( anchor_x, anchor_y, 3, 1, 'D', Fore.BLACK, Back.BLUE, True )  
 
+class HWindow():
+
+    def __init__(self, w, h):
+        self.w = w
+        self.h = h
+
+    def draw(self,anchor_x,anchor_y):
+        draw_box( anchor_x, anchor_y, 3, 1, 'W', Fore.CYAN, Back.BLUE, True ) 
+
+class VWindow():
+
+
+    def __init__(self, w, h):
+        self.w = w
+        self.h = h
+
+    def draw(self,anchor_x,anchor_y):
+        draw_box( anchor_x, anchor_y, 1, 3, 'W', Fore.CYAN, Back.BLUE, True ) 
+
+class NoticeBoard():
+
+
+    def __init__(self, w, h):
+        self.w = w
+        self.h = h
+
+    def draw(self,anchor_x,anchor_y):
+        draw_box( anchor_x, anchor_y, 2, 1, 'N', Fore.BLACK, Back.YELLOW, True ) 
+
 class CellarDoor():
 
     def __init__(self, w, h):
