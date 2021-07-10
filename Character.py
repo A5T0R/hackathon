@@ -1,37 +1,33 @@
 from DrawingTools import *
 
-class Player():
-
+class Character:
     def __init__(self, w, h):
         self.w = w
         self.h = h
 
+class Player(Character):
     def draw(self,anchor_x,anchor_y):
-        draw_character( anchor_x, anchor_y, 1, 1, '@', Fore.BLUE, Back.CYAN, False )
+        draw_character( anchor_x, anchor_y, self.w, self.h, '@', Fore.BLUE, Back.CYAN, False )
+        self.current_anchor_x = anchor_x
+        self.current_anchor_y = anchor_y
 
-class NPT_BarOwner():
+    def refresh(self):
+        self.draw( self.current_anchor_x, self.current_anchor_y )
 
-    def __init__(self, w, h):
-        self.w = w
-        self.h = h
+    def move(self,event):
+        if( event.name == "down" ):
+            self.current_anchor_y += 1
+        self.refresh()
+        
 
+class NPT_BarOwner(Character):
     def draw(self,anchor_x,anchor_y):
-        draw_character( anchor_x, anchor_y, 1, 1, '$', Fore.YELLOW, Back.MAGENTA, False )
+        draw_character( anchor_x, anchor_y, self.w, self.h, '$', Fore.YELLOW, Back.MAGENTA, False )
 
-class NPT_BarStaff():
-
-    def __init__(self, w, h):
-        self.w = w
-        self.h = h
-
+class NPT_BarStaff(Character):
     def draw(self,anchor_x,anchor_y):
-        draw_character( anchor_x, anchor_y, 1, 1, '$', Fore.MAGENTA, Back.YELLOW, False )
+        draw_character( anchor_x, anchor_y, self.w, self.h, '$', Fore.MAGENTA, Back.YELLOW, False )
 
-class NPT_Patron():
-
-    def __init__(self, w, h):
-        self.w = w
-        self.h = h
-
+class NPT_Patron(Character):
     def draw(self,anchor_x,anchor_y):
-        draw_character( anchor_x, anchor_y, 1, 1, '&', Fore.MAGENTA, Back.BLACK, False )
+        draw_character( anchor_x, anchor_y, self.w, self.h, '&', Fore.MAGENTA, Back.BLACK, False )
