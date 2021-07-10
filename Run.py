@@ -1,8 +1,9 @@
 from Tavern import *
 from Map import *
 from Furniture import *
-import keyboard
+from UserInterface import *
 from DrawingTools import clearscreen
+import time
 
 
 def draw_map():
@@ -41,10 +42,9 @@ def run():
 
     draw_map()
 
-    while True:
-        d = keyboard.read_key()
-        if(d=='q'):
-            break
+    bind_movement_keys()
+
+    keyboard.wait("Esc")
 
 if __name__ == "__main__":
  
