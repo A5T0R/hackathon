@@ -1,5 +1,6 @@
 from Tavern import *
 from Map import *
+from Furniture import *
 import keyboard
 from DrawingTools import clearscreen
 
@@ -9,12 +10,14 @@ def run():
     clearscreen()
 
     m = Map()
-    t = Tavern(16,16,"The Dragons Hoard")
 
-    t.add(3,3,Table(4,1))
+    tbl = Table(4,1)
+    tvn = Tavern(20,20,"The Dragons Hoard")
 
-    m.add(5,5,t)
+    tvn.add( 2,2, tbl )
+    tvn.add( 2,8, tbl )
 
+    m.add(0,0,tvn)
     m.draw()
 
 
