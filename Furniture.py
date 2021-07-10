@@ -77,3 +77,4 @@ class CellarDoor():
 
     def draw(self,anchor_x,anchor_y):
         draw_box( anchor_x, anchor_y, 2, 2, 'O', Fore.BLACK, Back.GREEN, True)
+
