@@ -23,3 +23,7 @@ class Tavern:
         LocatedObject = namedtuple('LocatedObject', 'anchor_x anchor_y object')
         self.objects.append(LocatedObject(anchor_x,anchor_y,obj))
 
+    def refresh(self,x,y):
+        # actually this thing has the logic to work out if it needs refreshing doesnt it
+        for lo in self.objects:
+            lo.object.refresh(x,y)
