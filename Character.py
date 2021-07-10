@@ -17,6 +17,8 @@ class Player(Character):
 
     def move(self,event):
         #print(event.name)
+        draw_character( self.current_anchor_x, self.current_anchor_y, self.w, self.h, ' ', Fore.BLACK, Back.BLACK, False )
+
         if( event.name == "down" ):
             self.current_anchor_y += 1
         if( event.name == "up" ):
