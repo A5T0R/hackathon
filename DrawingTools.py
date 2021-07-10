@@ -24,7 +24,7 @@ def draw_box( x_anchor, y_anchor, width, height, letter, back_colour, fore_colou
         print('%s%s' % (pos(x_anchor*2, height+y_anchor-1), letter*(width*2)), end='')
         print(Fore.WHITE, end='')
         print(Back.BLACK, end='')
-        print('%s' % pos(1, 1), end='')
+        print('%s' % pos(44, 24), end='')
         sys.stdout.flush()
 
 def draw_character( x_anchor, y_anchor, width, height, letter, back_colour, fore_colour, solid ):
@@ -39,6 +39,6 @@ def draw_character( x_anchor, y_anchor, width, height, letter, back_colour, fore
                 print('%s%s%s%s' % (pos(x_anchor*2, y),letter + letter,pos(x_anchor*2+(width*2)-2, y), letter + letter), end='')
         print('%s%s' % (pos(x_anchor*2, height+y_anchor-1), letter*(width*2)), end='')
         print(Back.BLACK, end='')
-        print('%s' % pos(1, 1), end='')
+        print('%s' % pos(44, 24), end='')
         
         sys.stdout.flush()

@@ -49,7 +49,7 @@ def draw_map():
     tvn.add( 4,0, hwd)
     tvn.add( 14,0, hwd)
 #Character
-    tvn.add( 10,1, chr)
+#    tvn.add( 10,1, chr)
 #NPTs
 
     tvn.add( 18,5, bro)
@@ -66,7 +66,7 @@ def run():
     draw_map()
 
     chr = Player(1,1)
-    chr.draw(10,3)
+    chr.draw(11,3)
     # this will fail... you need to pass an instance of an object with a function called move that takes a single argument keyboard.KeyboardEvent
     bind_movement_keys(chr)
 
